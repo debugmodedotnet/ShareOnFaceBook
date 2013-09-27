@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>      
+
+        <script src="scripts/default.js"></script>
+      
+
+    </head>
+    <body>
+
+        <div data-role="view" data-title="Share" id="homeview">
+            <input class="inputtext" id="msgTxt" type="text" /> <br />
+            <a class="sharebutton"data-role="button" data-click="PostOnFb">Share on FB</a> 
+
+        </div>
+       
+        <div data-role="layout" data-id="applayout" >
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </header>
+            <div data-role="footer">
+                <div data-role="tabstrip">
+                <a href="#homeview" data-icon="share" ></a>
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+            var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "applayout" });
+        </script>
+
+    </body>
+</html>
+        
